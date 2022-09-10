@@ -1,0 +1,14 @@
+{
+  "name": "product-preview-card-component-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Product preview card component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+   "sassprod": "sass main.scss:./public/css/style.css -w --style=compressed",
+    "sassdev": "sass main.scss:./public/css/style.css -w",
+    "prefix": "postcss -w ./public/css/style.css --user autoprefixer -d ./public/css/prefixed/"
+  },
+  "keywords": [],
+  "author": "Mukebu David",
+  "license": "ISC"
+}
