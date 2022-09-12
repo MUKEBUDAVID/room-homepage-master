@@ -30,25 +30,55 @@ icon_close.addEventListener("click", () => {
 })
 
 
-//code pour le scroll des images
-let temp = 1;
-icon_angle_right.addEventListener("click", () => {
-    temp++; 
-    if (temp>=4) {
-        temp = 1;
+//code pour le scroll des images mobile
+
+
+if (screen.width <= 375) {
+  let temp = 1;
+  icon_angle_right.addEventListener("click", () => {
+    temp++;
+    if (temp >= 4) {
+      temp = 1;
     }
-sroll_img.style.backgroundImage = `url(images/mobile-image-hero-${temp}.jpg)`;    
-sroll_img.style.backgroundRepeat = "no-repeat";    
-sroll_img.style.backgroundSize ="cover" ;    
-})
+    sroll_img.style.backgroundImage = `url(images/mobile-image-hero-${temp}.jpg)`;
+    sroll_img.style.backgroundRepeat = "no-repeat";
+    sroll_img.style.backgroundSize = "100% 100%";
+  });
+
+  icon_angle_left.addEventListener("click", () => {
+    temp--;
+    if (temp < 1) {
+      temp = 3;
+    }
+    sroll_img.style.backgroundImage = `url(images/mobile-image-hero-${temp}.jpg)`;
+    sroll_img.style.backgroundRepeat = "no-repeat";
+    sroll_img.style.backgroundSize = "100% 100%";
+  });
+}
 
 
-icon_angle_left.addEventListener("click", () => {
-  temp--;
-  if (temp < 1) {
-    temp = 3;
-  }
-  sroll_img.style.backgroundImage = `url(images/mobile-image-hero-${temp}.jpg)`;
-  sroll_img.style.backgroundRepeat = "no-repeat";
-  sroll_img.style.backgroundSize = "cover";
-});
+//code pour le scroll des images Desktop
+
+
+if (screen.width >= 376) {
+  let temp = 1;
+  icon_angle_right.addEventListener("click", () => {
+    temp++;
+    if (temp >= 4) {
+      temp = 1;
+    }
+    sroll_img.style.backgroundImage = `url(images/desktop-image-hero-${temp}.jpg)`;
+    sroll_img.style.backgroundRepeat = "no-repeat";
+    sroll_img.style.backgroundSize = "100% 100%";
+  });
+
+  icon_angle_left.addEventListener("click", () => {
+    temp--;
+    if (temp < 1) {
+      temp = 3;
+    }
+    sroll_img.style.backgroundImage = `url(images/desktop-image-hero-${temp}.jpg)`;
+    sroll_img.style.backgroundRepeat = "no-repeat";
+    sroll_img.style.backgroundSize = "100% 100%";
+  });
+}

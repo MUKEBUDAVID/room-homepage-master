@@ -15,95 +15,11 @@
 html {
   // 10px div by def of 16px
   font-size: 62.5%;
-  width: 100vw;
-  height: 100%;
+  // width: 100vw;
+  // height: 100%;
 }
 
-@media screen and (max-width: map-get($breakpoint, Mobile)) {
-  body {
-    box-sizing: border-box;
-    font-family: "Fraunces", serif;
-    font-family: "Inter", sans-serif;
-    font-family: "Montserrat", sans-serif;
-    font-family: "League Spartan", sans-serif;
-    overflow-x: hidden;
-    width: 100vw;
-    height: 100%;
 
-    display: grid;
-    grid-template-columns: 100vw;
-    // grid-template-rows: 350px 0.4fr 0.5fr 250px 250px ;
-    grid-template-rows: 350px 1fr 1fr 1fr 1fr;
-
-    position: relative;
-  }
-
-  .sroll_img {
-    grid-column: 1;
-    grid-row: 1;
-    background-image: url("../../images/mobile-image-hero-1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    .icon-hamburger {
-      width: 30px;
-      height: 30px;
-      margin-top: 20px;
-      margin-left: 20px;
-
-      // visibility: hidden;
-    }
-
-    p {
-      color: $White;
-      font-size: x-large;
-      margin-top: 20px;
-      margin-right: 40vw;
-      // display: none;
-      text-decoration: none;
-    }
-
-    p a {
-      text-decoration: none;
-      color: $White;
-    }
-  }
-
-  .text_1 {
-    grid-column: 1;
-    grid-row: 2;
-    // background:red;
-    position: relative;
-  }
-  .image_about_dark {
-    grid-column: 1;
-    grid-row: 3;
-    object-fit: cover;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .text_2 {
-    grid-column: 1;
-    grid-row: 4;
-  }
-  .image_about_light {
-    grid-column: 1;
-    grid-row: 5;
-    object-fit: cover;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-}
 
 @media screen and (min-width: map-get($breakpoint, Desktop)) {
   body {
@@ -116,68 +32,62 @@ html {
     width: 100vw;
     height: 100%;
 
-    display: grid;
-    grid-template-columns: repeat(100, 1fr);
-
-    grid-template-rows: repeat(100, 1fr);
-
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    
   }
 
-  #header {
-    grid-column: 1/64;
-    grid-row: 1/75;
+  .premier,.second{
+    display: flex;
+    flex-direction: row;
   }
 
   .sroll_img {
-    grid-column: 1/60;
-    grid-row: 1/65;
     background-image: url("../../images/desktop-image-hero-1.jpg");
     background-repeat: no-repeat;
-    background-size: 92% 100%;
+    background-size: 100% 100%;
+    width: 60vw;
+    height: 70vh;
+    // height: 419px;
 
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-start;
     object-fit: cover;
-    //  background-color: red;
+     
     .icon-hamburger {
-      width: 30px;
-      height: 30px;
-      margin-top: 20px;
-      margin-left: 20px;
-
-      visibility: hidden;
+     visibility: hidden;
     }
 
     p {
-      color: $White;
-      font-size: x-large;
-      margin-top: 20px;
-      margin-right: 56vw;
-      // display: none;
-      z-index: 20;
+      color: #fff;
+      font-size: 2vw;
+      margin-left: -77%;
+      margin-top: 21px;
+      // z-index: 20;
+      cursor: pointer;
     }
 
-    p a {
-      text-decoration: none;
-      color: $White;
-    }
+  
   }
 
   .text_1 {
-    grid-column: 62/100;
-    grid-row: 1/65;
+    width: 40vw;
+    height: 70vh;
+    // height: 419px;
     // background:blue;
     display: flex;
-    justify-content: end;
-    align-items: flex-start;
+    // justify-content: end;
+    align-items: center;
     
   }
   .image_about_dark {
-    grid-column: 1/30;
-    grid-row: 65/101;
+    height: 31vh;
+    width:30vw;
     object-fit: cover;
+    
+
 
     img {
       width: 100%;
@@ -186,17 +96,114 @@ html {
   }
 
   .text_2 {
-    grid-column: 31/70;
-    grid-row: 66/100;
+    height: 30vh;
+    width:40vw;
+    
   }
   .image_about_light {
-    grid-column: 70/101;
-    grid-row: 65/101;
-    object-fit: cover;
-
+   height: 31vh;
+   width: 32vw;
+   object-fit: cover;
+   margin-top: 0px;
     img {
       width: 100%;
       height: 100%;
     }
   }
 }
+
+
+@media screen and (max-width: map-get($breakpoint, Mobile)) {
+  body {
+    box-sizing: border-box;
+    font-family: "Fraunces", serif;
+    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-family: "League Spartan", sans-serif;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 1480px;
+
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .premier,.second{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sroll_img {
+    background-image: url("../../images/mobile-image-hero-1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 300px;
+    // height: 419px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: flex-start;
+    object-fit: cover;
+     
+    .icon-hamburger {
+    top: 17px;
+    right: 84%;
+    position: absolute;
+    }
+
+    #room {
+      color: #fff;
+      font-size: 5vw;
+      // margin-left: -77%;
+      margin-top: 15px;
+      z-index: 20;
+      cursor: pointer;
+    }
+
+  
+  }
+
+  .text_1 {
+    width: 100vw;
+    height: 400px;
+    
+    // background:blue;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    
+  }
+  .image_about_dark {
+    width:100vw;
+    height: 250px;
+    object-fit: cover;
+    
+
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .text_2 {
+    width:100vw;
+    height: 300px;
+    
+  }
+  .image_about_light {
+    width: 100vw;
+    height: 1fr;
+   object-fit: cover;
+   
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
